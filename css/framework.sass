@@ -1,0 +1,121 @@
+$posit: relative
+
+/* Section Z-Index */
+@mixin z-index-place
+	@for $i from 1 through 4
+		&:nth-child(#{$i})
+			z-index: (4 - $i)
+
+*
+	margin: 0
+	padding: 0
+	border: 0
+
+html
+	height: 100%
+	box-sizing: border-box
+
+body
+	margin: 0
+
+ul
+	list-style-type: none
+
+section
+	@include z-index-place
+	padding-top: 5rem
+	position: relative
+
+nav
+	position: relative
+	height: 10vh
+	padding: 1.5rem 8rem
+	z-index: 100
+	display: block
+	div
+		ul
+			float: right
+			li
+				display: inline
+				a
+					float: left
+					display: block
+					padding: 1.5rem				
+
+.nav-container 
+	position: relative
+	height: 100%
+
+.table
+	display: table
+	margin: 0 auto
+
+.exp-text, .text-left
+	float: left
+
+.exp-pic, .text-right
+	float: right
+
+.text-left
+	text-align: right
+
+.text-right
+	text-align: left
+
+#biography
+	height: 73vh
+	div
+		padding-top: 5vh
+		padding-bottom: 5vh
+		ul li
+			display: inline-block
+			padding-right: 4vw
+		
+.circle-img 
+	border-radius: 50%
+
+#work
+	padding: 0
+	height: 15vh
+	h1
+		margin: 0 auto
+		padding-top: 6vh		
+
+#quote
+	padding: 0 23vw
+	padding-bottom: 2vh
+
+.experience-block
+	height: 35vh
+	width: 66vw
+	margin: 0 16vw
+	margin-bottom: 6vh
+	transition: all .4s ease-in-out
+	&:hover
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.60)
+	div
+		margin: 6vh 4vw
+		ul
+			list-style-type: dots
+
+#work-blocks
+	margin: 0 auto
+	padding-bottom: 10vh
+
+
+footer
+	z-index: 0
+	height: 9vh
+	div
+		padding-top: 2.5vh
+		ul li
+			display: inline
+			padding-right: 2vw
+
+/* Media Queries */
+@media screen and (max-width: 800px)
+	#biography
+		height: 100%
+	footer
+		height: 8vh
+		padding: .5rem

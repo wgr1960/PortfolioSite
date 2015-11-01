@@ -1,0 +1,103 @@
+/* Background Colors */
+$body-bkg-color: #E9EAED
+$nav-footer-bkg-color: #1976D2
+
+/* Box Shadows */
+$section-shadow: 0px 13px 20px 0px rgba(0, 0, 0, 0.2)
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,400italic,700,700italic,900,900italic')
+
+$font-stack: 'Roboto', sans-serif
+
+/* Font Colors */
+$colored-bkg-font-color: white
+
+/* Font-Sizes */
+$nav-font-size: 23px
+$sm-nav-font-size: 20px
+
+/* Text Alignment */
+$txt-alignment: center
+
+/* Section Shadows */
+@mixin box_shadow($shadow)
+	&:nth-child(n):nth-child(-n+4)
+		-webkit-box-shadow: $shadow
+		box-shadow: $shadow
+
+
+/* Selectors */
+body
+	background-color: $body-bkg-color
+	font-family: $font-stack
+
+section 
+	@include box_shadow($section-shadow)
+
+a
+	text-decoration: none
+
+nav
+	background-color: $nav-footer-bkg-color
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+
+	div
+		ul
+			li	
+				a					
+					font-size: $nav-font-size
+					font-weight: bolder
+					color: $colored-bkg-font-color
+					&:hover
+						background-color: #A52525
+
+.circle-img 
+	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.35), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+
+/* Sections */
+#biography
+	background: url('../img/bkg.png') no-repeat
+	background-size: cover
+	background-attachment: fixed
+	h1, h3, p
+		text-align: $txt-alignment
+
+#work
+	background-color: #000
+	h1
+		color: $colored-bkg-font-color
+
+#quote
+	color: #757575
+	font-weight: lighter
+	font-style: italic
+
+.experience-block
+	background-color: $colored-bkg-font-color
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	div h1
+		color: #1976D2
+	div h4
+		color: #71879D
+
+#contact
+	form
+		fieldset
+			border-style: none
+
+/* Footer */
+.email-footer
+	color: $colored-bkg-font-color
+
+footer
+	background-color: $nav-footer-bkg-color
+	div ul li a
+		color: white
+
+
+/* Media Queries */
+@media screen and (max-width: 800px)
+	nav div ul li a
+		font-size: $sm-nav-font-size
