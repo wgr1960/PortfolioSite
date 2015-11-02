@@ -11,7 +11,7 @@ body {
   background-color: #E9EAED;
   font-family: "Roboto", sans-serif; }
 
-section:nth-child(n):nth-child(-n+4) {
+section:nth-child(n):nth-child(-n+8) {
   -webkit-box-shadow: 0px 13px 20px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 13px 20px 0px rgba(0, 0, 0, 0.2); }
 
@@ -26,18 +26,34 @@ nav {
     font-weight: bolder;
     color: white; }
     nav div ul li a:hover {
-      background-color: #A52525; }
+      background-color: #0d47a1; }
 
 .circle-img {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.35), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 /* Sections */
-#biography {
-  background: url("../img/bkg.png") no-repeat;
+#intro {
+  background: url("../img/bkg2.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed; }
-  #biography h1, #biography h3, #biography p {
-    text-align: center; }
+  #intro h1, #intro h3 {
+    text-align: center;
+    color: white; }
+  #intro h1 {
+    font-size: 2.5em;
+    font-weight: 100; }
+  #intro h3 {
+    font-size: 1.5em;
+    font-weight: 150; }
+
+#biography {
+  background-color: #0d47a1; }
+
+#hobbies {
+  background-color: #727272; }
+
+#biography h1, #biography h3, #biography p {
+  text-align: center; }
 
 #work {
   background-color: #000; }
@@ -50,6 +66,7 @@ nav {
   font-style: italic; }
 
 .experience-block {
+  opacity: 0;
   background-color: white;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }

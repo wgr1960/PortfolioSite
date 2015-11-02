@@ -4,7 +4,7 @@ $posit: relative
 @mixin z-index-place
 	@for $i from 1 through 4
 		&:nth-child(#{$i})
-			z-index: (4 - $i)
+			z-index: (9 - $i)
 
 *
 	margin: 0
@@ -32,19 +32,25 @@ nav
 	padding: 1.5rem 8rem
 	z-index: 100
 	display: block
-	div
-		ul
-			float: right
-			li
-				display: inline
-				a
-					float: left
-					display: block
-					padding: 1.5rem				
-
+	div ul
+		float: right
+		li
+			display: inline
+			a
+				float: left
+				display: block
+				padding: 1.5rem	
+	
 .nav-container 
 	position: relative
 	height: 100%
+
+
+.container
+	width: 100%
+	margin-left: 0
+
+
 
 .table
 	display: table
@@ -62,7 +68,26 @@ nav
 .text-right
 	text-align: left
 
-#biography
+#intro
+	height: 73vh
+	ul li
+		display: inline
+		padding-right: 4vw
+		text-align: center
+		img
+			width: 100%	
+
+
+
+
+#biography, #work, #hobbies
+	padding: 0
+	height: 15vh
+	h1
+		margin: 0 auto
+		padding-top: 6vh	
+
+#biography-ext
 	height: 73vh
 	div
 		padding-top: 5vh
@@ -74,16 +99,23 @@ nav
 .circle-img 
 	border-radius: 50%
 
-#work
-	padding: 0
-	height: 15vh
-	h1
-		margin: 0 auto
-		padding-top: 6vh		
-
 #quote
 	padding: 0 23vw
 	padding-bottom: 2vh
+
+.strike
+	display: block
+	text-align: center
+	overflow: hidden
+	white-space: nowrap
+	color: #FFFFFF
+	padding: 50px
+
+h2 span
+	position: relative
+
+h2 span:before, h2 span:after
+	border-top: 2px solid #dfdfdf
 
 .experience-block
 	height: 35vh
@@ -94,14 +126,19 @@ nav
 	&:hover
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.60)
 	div
-		margin: 6vh 4vw
+		margin: 6vh 3vw
 		ul
-			list-style-type: dots
+			list-style-type: disc
+			list-style-position: inside
+			li
+				margin: .5em 0
 
 #work-blocks
 	margin: 0 auto
 	padding-bottom: 10vh
 
+#hobbies-ext
+	height: 73vh
 
 footer
 	z-index: 0
@@ -114,8 +151,19 @@ footer
 
 /* Media Queries */
 @media screen and (max-width: 800px)
-	#biography
+	#intro
 		height: 100%
+	.experience-block
+		height: 65vh
+		width: 87vw
+		margin: 0 5vw
+		div
+			display: block
+			float: none
+			width: 100%
+	.exp-text
+		padding: 0 5vw
+		padding-top: 7vh
 	footer
 		height: 8vh
 		padding: .5rem
