@@ -15,30 +15,50 @@ section:nth-child(n):nth-child(-n+8) {
   -webkit-box-shadow: 0px 13px 20px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 13px 20px 0px rgba(0, 0, 0, 0.2); }
 
+#scrollLink {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
 a {
   text-decoration: none; }
 
 nav {
   background-color: #1976D2;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-  nav div ul li a {
+
+.hamburger-menu .dropdown {
+  background-color: #0d47a1; }
+  .hamburger-menu .dropdown li a {
     font-size: 23px;
     font-weight: bolder;
     color: white; }
-    nav div ul li a:hover {
+
+.menu {
+  padding: 0;
+  margin: 0; }
+  .menu ul li a {
+    font-size: 23px;
+    font-weight: bolder;
+    color: white; }
+    .menu ul li a:hover {
       background-color: #0d47a1; }
+
+#hamburger {
+  background-color: #1976D2;
+  color: white; }
 
 .circle-img {
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.35), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 /* Sections */
 #intro {
-  background: url("../img/bkg2.jpg") no-repeat;
+  background: url("../img/intro-bkg.png") no-repeat;
   background-size: cover;
   background-attachment: fixed; }
   #intro h1, #intro h3 {
     text-align: center;
-    color: white; }
+    color: white;
+    text-shadow: 3px 3px 8px #000; }
   #intro h1 {
     font-size: 2.5em;
     font-weight: 100; }
@@ -48,15 +68,20 @@ nav {
 
 #biography {
   background-color: #0d47a1; }
+  #biography h1, #biography h3, #biography p {
+    text-align: center; }
 
-#hobbies {
-  background-color: #727272; }
-
-#biography h1, #biography h3, #biography p {
-  text-align: center; }
+#biography-ext {
+  background: url("../img/bio-bkg.png") no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  #biography-ext h1, #biography-ext h2, #biography-ext h3, #biography-ext h5, #biography-ext p {
+    text-align: left;
+    color: white;
+    text-shadow: 3px 3px 1px #000; }
 
 #work {
-  background-color: #000; }
+  background-color: #727272; }
   #work h1 {
     color: white; }
 
@@ -82,14 +107,41 @@ nav {
 .email-footer {
   color: white; }
 
+#hobbies {
+  background-color: #000; }
+
+#hobbies-ext {
+  background: url("../img/hobbies-bkg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+
 footer {
   background-color: #1976D2; }
   footer div ul li a {
     color: white; }
 
 /* Media Queries */
+@media screen and (max-width: 1366px) {
+  .experience-block div ul li p {
+    font-size: 0.8em; } }
+@media screen and (max-width: 1200px) {
+  .experience-block div ul li p {
+    font-size: 0.7em; } }
 @media screen and (max-width: 800px) {
   nav div ul li a {
     font-size: 20px; } }
+@media screen and (max-height: 640px) {
+  #nav-logo {
+    content: url("../img/wr_logo.png"); } }
+@media screen and (max-width: 600px) {
+  #intro {
+    background: url("../img/intro2-bkg.png") no-repeat; }
+
+  #biography-ext {
+    background: url("../img/bio2-bkg.png") no-repeat; }
+
+  #hobbies-ext {
+    background: url("../img/hobbies2-bkg.png") no-repeat; } }
 
 /*# sourceMappingURL=style.css.map */

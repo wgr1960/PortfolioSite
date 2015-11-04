@@ -18,13 +18,13 @@ section {
   padding-top: 5rem;
   position: relative; }
   section:nth-child(1) {
-    z-index: 7; }
+    z-index: 8; }
   section:nth-child(2) {
-    z-index: 6; }
+    z-index: 7; }
   section:nth-child(3) {
-    z-index: 5; }
+    z-index: 6; }
   section:nth-child(4) {
-    z-index: 4; }
+    z-index: 5; }
 
 nav {
   position: relative;
@@ -32,18 +32,44 @@ nav {
   padding: 1.5rem 8rem;
   z-index: 100;
   display: block; }
-  nav div ul {
+
+.nav-container {
+  position: relative;
+  height: 100%;
+  display: inline; }
+
+.logo {
+  float: left; }
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+  float: right;
+  display: none; }
+  .hamburger-menu .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: 0;
+    display: none;
     float: right; }
-    nav div ul li {
+    .hamburger-menu .dropdown li {
       display: inline; }
-      nav div ul li a {
+      .hamburger-menu .dropdown li a {
         float: left;
         display: block;
         padding: 1.5rem; }
 
-.nav-container {
-  position: relative;
-  height: 100%; }
+.menu {
+  float: right; }
+  .menu ul {
+    float: right; }
+    .menu ul li {
+      display: inline; }
+      .menu ul li a {
+        float: left;
+        display: block;
+        padding: 1.5rem; }
 
 .container {
   width: 100%;
@@ -59,18 +85,12 @@ nav {
 .exp-pic, .text-right {
   float: right; }
 
-.text-left {
-  text-align: right; }
-
-.text-right {
-  text-align: left; }
-
 #intro {
-  height: 73vh; }
+  padding-top: 4rem;
+  height: 79vh; }
   #intro ul li {
     display: inline;
-    padding-right: 4vw;
-    text-align: center; }
+    padding-right: 4vw; }
     #intro ul li img {
       width: 100%; }
 
@@ -84,8 +104,9 @@ nav {
 #biography-ext {
   height: 73vh; }
   #biography-ext div {
-    padding-top: 5vh;
-    padding-bottom: 5vh; }
+    float: left;
+    padding: 5vh 20vw;
+    line-height: 1.5em; }
     #biography-ext div ul li {
       display: inline-block;
       padding-right: 4vw; }
@@ -134,6 +155,12 @@ h2 span:before, h2 span:after {
 #hobbies-ext {
   height: 73vh; }
 
+.video-container iframe {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 50%; }
+
 footer {
   z-index: 0;
   height: 9vh; }
@@ -144,6 +171,10 @@ footer {
       padding-right: 2vw; }
 
 /* Media Queries */
+@media screen and (max-width: 1200px) {
+  .video-container iframe {
+    width: 70%;
+    height: 70%; } }
 @media screen and (max-width: 800px) {
   #intro {
     height: 100%; }
@@ -158,11 +189,60 @@ footer {
       width: 100%; }
 
   .exp-text {
-    padding: 0 5vw;
     padding-top: 7vh; }
 
   footer {
     height: 8vh;
     padding: 0.5rem; } }
+@media screen and (max-width: 1200px) {
+  .experience-block {
+    width: 72vw;
+    margin: 0px 13vw; } }
+@media screen and (max-width: 870px) {
+  nav {
+    padding: 1.5rem 3rem; }
+
+  #intro {
+    padding-top: 2rem; }
+
+  .hamburger-menu {
+    padding-top: 2vh;
+    display: block; }
+
+  .menu {
+    display: none; }
+
+  #biography-ext {
+    height: 83vh; }
+
+  .experience-block {
+    height: 71vh;
+    width: 50vw;
+    margin: 0px 27vw; } }
+@media screen and (max-width: 780px) {
+  #biography-ext {
+    height: 88vh; }
+
+  .strike {
+    padding: 30px; } }
+@media screen and (max-width: 650px) {
+  #biography-ext {
+    height: 85vh; } }
+@media screen and (max-width: 450px) {
+  #biography-ext {
+    height: 84vh; }
+
+  .video-container iframe {
+    width: 100%; }
+
+  .experience-block {
+    width: 75vw;
+    margin: 0px 10vw; } }
+@media screen and (max-width: 320px), screen and (max-height: 750) {
+  #biography-ext {
+    height: 125vh; } }
+@media screen and (max-width: 320px) {
+  #biography-ext {
+    height: 145vh; } }
 
 /*# sourceMappingURL=framework.css.map */
